@@ -7,38 +7,66 @@
     <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
-	<style>
-		p{
-			margin:70px 25px 41px 337px;
-		}
-        a {
-            color: #85029b;
-            position: static;
-            text-decoration: none;
-            text-decoration-thickness: from-font;
-        }
-	</style>
+
 </head>
 
-
-<body>
-	
-        <p>
-        <a href="./assets/LetterForHabibi.pdf" download>Download The Letter</a>
+<header>
+    <div class="overlay">
+        <h1 style="font-size:4.5vw">Hello Habibi!</h1>
+        <h3 style="font-size:3.5vw">i built a page specially for you!</h3>
+        <p class="text">Hey! Volume up and listen the background music.<br>
+            If you go to x location,you'll see my avatar!<br>
+            also;i wrote you a letter.
+            you can download it from button bellow!<br>
+            <br>
+            Hope you enjoy;ilia!<br>
+            your honor;Aida.Ashrafpour.
         </p>
+        <p class="btn">
+            <a href="./assets/LetterForHabibi.pdf" download class="bubbly-button">The Letter
+                <i class="fa fa-download"></i>
+            </a>
+        </p>
+        
+    </div>
+</header>
+<body>
+   
+    <!-- <div class="popup" id="myPopup">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <h2>Hello Habibi!</h2>
+            <p>shhbcjbk jwjndndnwwnkcnw knwkncncnekncvve
+                cnkcnenckecekc knckecencnvle.
+            </p>
+            <div class="controls">
+                <button class="close-btn">Close</button>
+                <button class="letter-btn">The Letter</button>
+            </div>
+        </div>
+    </div> -->
+	
+    <!-- <p>
+        <a href="./assets/LetterForHabibi.pdf" download class="bubbly-button">The Letter
+            <i class="fa fa-download"></i>
+        </a>
+    </p> -->
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        <a-camera gps-camera rotation-reader></a-camera>
+        <a-entity gltf-model="./assets/model/avatar.gltf"  scale="20 20 20" gps-entity-place="longitude: 51.320196; latitude: 35.729910;" animation-mixer/>
         <a-entity id="music" 
          sound="src: url(music.mp3); autoplay: true "></a-entity>
-        
-        <a-camera gps-camera rotation-reader></a-camera>
-
-        <a-entity gltf-model="./assets/model/avatar.gltf" animation-mixer scale="8 8 8" gps-entity-place="longitude: 51.320196; latitude: 35.729910;" />
 	</a-scene>
      
 </body>
