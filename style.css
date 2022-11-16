@@ -7,7 +7,6 @@ header{
     overflow: hidden;
 }
 header .overlay{
-    display: inline;
     width: 100%;
 	height: 100%;
 	padding: 1px;
@@ -16,7 +15,6 @@ header .overlay{
 	text-shadow: 1px 1px 1px #333;
 }
 h1 {
-    display: inline;
 	font-family: 'Press Start 2P', cursive;
     color: #ff0081;
     text-shadow:1px 2px 2px #fff;
@@ -27,7 +25,6 @@ h1 {
 
 
 h3 {
-    display: inline;
     font-family: 'Quantico', sans-serif;
     color: #ffe23f;
     text-shadow:1px 1px 1px 1px rgb(0, 0, 0);
@@ -49,7 +46,6 @@ p.text{
     margin-top: 0;
 }
 p.btn{
-    display: inline;
     font-size: 13px;
     text-align: center;
     margin-top: 16px;
