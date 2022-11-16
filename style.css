@@ -16,17 +16,20 @@ header .overlay{
 }
 h1 {
 	font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
     color: #ff0081;
-    text-shadow:1px 2px 2px #fff;
+    text-shadow:2px 3px 2px rgb(226, 133, 255);
     text-align: center;
-    margin-bottom: 9px;
-    margin-top: 35px;
+    margin-bottom: 20px;
+    margin-top: 12px;
 }
 
 
 h3 {
     font-family: 'Quantico', sans-serif;
-    color: #ffe23f;
+    font-size: 20px;
+    color: #ffea00;
+    background: #fcab32;
     text-shadow:1px 1px 1px 1px rgb(0, 0, 0);
 	margin-bottom: 12px;
     margin-top: 12px;
@@ -34,21 +37,18 @@ h3 {
 
 }
 p.text{
-    display: inline;
-    font-family: 'Cabin', sans-serif;
-    font-size: 12px;
+    font-family: 'Quantico', sans-serif;
+    font-size: 20px;
     padding: 15px;
-    color: #ffffff;
-    background: #c1166b58;
-    background-clip: content-box;
+    color: #ff00b7;
     text-shadow:1px 1px 1px rgb(0, 0, 0);
     text-align: center;
-    margin-top: 0;
+    margin-top: 20px;
 }
 p.btn{
-    font-size: 13px;
+    font-size: 16px;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 25px;
 }
 a{
     text-decoration: none;
@@ -134,3 +134,43 @@ a{
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
 } 
+
+body {
+    background-color: #d4f5fe;
+    margin: 1em;
+    padding: 0;
+    font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
+}
+
+
+#card {
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+model-viewer {  
+    width: 100%;
+    height: 400px;
+    background-color: #70BCD1;
+    --poster-color: #ffffff00;
+}
+#benz{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+  audio{
+    position: relative;
+    padding: 2em;
+    justify-content: center;
+  }
