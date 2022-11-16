@@ -3,10 +3,12 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Habibi</title>
     <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="./aframe-extras.animation-mixer/dist/aframe-extras.animation-mixer.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
@@ -20,33 +22,64 @@
 
 <header>
     <div class="overlay">
-        <h1 style="font-size:4.5vw">Hello Habibi!</h1>
-        <h3 style="font-size:3.5vw">I built this page exclusively for you!</h3>
-        <p class="text">Turn up the volume of your phone and listen to the background music.<br>
-            If you go to the coordinates of the dormitory,you'll see my avatar!<br>
-            Also,I wrote you a letter.
-            You can download it from the link below!<br>
+        <h1 >Hello Habibi!</h1>
+        <h3 >  I built this page exclusively for you!</h3>
+        <p class="text" >
+            Habibiii;Turn up the volume of your phone,go to the bottom and listen to the song that has kept me alive until now..!<br>
+            <br>
+            If you click on the "AR Button",<br>you'll see my Avatar!<br>
+            As well as,You can see your Favorite Car!<br>
+            <br>
+            Also,I wrote you a "Letter".<br>
+            You can download it from the link below!
+            <br>
             <br>
             Hope you enjoy,Ilia!<br>
             Best Wishes;Aida.
-        </p>
-        <p class="btn">
-            <a href="./assets/LetterForHabibi.pdf" download class="bubbly-button">The Letter
-                <i class="fa fa-download"></i>
-            </a>
+            <br>
+            &#128420;
         </p>
         
     </div>
 </header>
-<body style='margin: 0; overflow: hidden;'>
-    <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-camera gps-camera rotation-reader></a-camera>
-        <a-entity gltf-model="./assets/model/avatar.gltf" rotation="0 143 0" scale="5 5 5" gps-entity-place="longitude:  51.320042306317205; latitude: 35.729942069055284;" animation-mixer  />
-        <a-entity id="music" 
-         sound="src: url(music.mp3); autoplay: true "></a-entity>
-	</a-scene>
+<body>
+    <div id="card">
+        <model-viewer
+        src="./assets/model/avatar.gltf"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        autoplay 
+        ar
+        >
+        </model-viewer>
+    </div>
+    <div id="benz">
+        <model-viewer
+        src="./assets/benz-amg-cls/scene.gltf"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        autoplay 
+        ar
+        >
+        </model-viewer>
+    </div>
+    <script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <p class="btn" >
+        <a href="./assets/LetterForHabibi.pdf" download class="bubbly-button">The Letter
+            <i class="fa fa-download"></i>
+        </a>
+    </p>
+    <audio controls autoplay>
+        <source src="music.mp3" type="audio/ogg">
+    </audio>
+    <footer>
+        By Aida Ashrafpour 2022-2023.
+    </footer>
 </body>
 </html>
