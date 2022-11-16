@@ -203,6 +203,7 @@ h1 {
 
 
 h3 {
+display: inline;
     font-family: 'Quantico', sans-serif;
     color: #ffe23f;
     text-shadow:1px 1px 1px 1px rgb(0, 0, 0);
@@ -224,7 +225,7 @@ p.text{
     margin-top: 0;
 }
 p.btn{
-    
+    display: inline;
     font-size: 13px;
     text-align: center;
     margin-top: 16px;
@@ -234,7 +235,7 @@ a{
 }
 .bubbly-button {
     font-family: "Helvetica", "Arial", sans-serif;
-    display: inline-block;
+    display: inline;
     font-size: 1em;
     padding: 1em 2em;
 
